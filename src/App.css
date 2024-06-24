@@ -1,0 +1,471 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.3rem;
+  background-color: #000;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+/** Sidebar component **/
+.sidebar {
+  width: 250px;
+  background-color: #000;
+  padding: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin: 0 0 1rem 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.sidebar-item:hover {
+  background-color: #181818;
+}
+
+.sidebar-item .icon {
+  margin-right: 10px;
+}
+
+/** SidebarItem component **/
+.profile-section {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.profile-details {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.profile-name {
+  display: block;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.profile-handle {
+  display: block;
+  color: #aaaaaa;
+  font-size: 0.8rem;
+}
+
+/** MainContent component **/
+.main-content {
+  flex: 1;
+  display: flex;
+  max-width: 1100px;
+  padding: 0;
+  border-top: 0.5px solid #2f3336;
+  border-bottom: 0.5px solid #2f3336;
+}
+
+/** TweetBox component **/
+.tweet-box {
+  background-color: #000;
+  border-right: 0.5px solid rgb(65, 65, 65);
+  border-left: 0.5px solid rgb(65, 65, 65);
+  border-radius: 10px;
+  padding: 10px;
+}
+.tweet-box textarea {
+  width: 99%;
+  background-color: transparent;
+  border: 0.1px solid #2f3336;
+  color: #ffffff;
+  resize: none;
+  outline: none;
+  font-size: 1rem;
+}
+.tweet-box-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.tweet-input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+.tweet-box-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3.2rem;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #0c93ec;
+}
+.boxicon {
+  color: #0c93ec;
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.tweet-button {
+  background-color: #1a8cd8;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.tweet-button:hover {
+  background-color: #0c93ec;
+}
+
+/** TweetFeed component **/
+.tweet-feed {
+  flex: 1;
+  width: 600px;
+  border: 0.5px solid #2f3336;
+}
+/** Tweet component **/
+.tweet {
+  background-color: #000;
+  color: #e7e9ea;
+
+  font-weight: 500;
+  padding: 10px;
+  border-bottom: 0.5px solid #2f3336;
+}
+.tweet-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.username {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.handle {
+  color: #4c4f53;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.timestamp {
+  color: #4c4f53;
+  cursor: pointer;
+}
+.tweet-body {
+  margin-bottom: 0.5rem;
+}
+.tweet-text {
+  margin-bottom: 0.5rem;
+}
+.tweet-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.icon {
+  color: #4c4f53;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.reply,
+.retweet,
+.like,
+.stats {
+  cursor: pointer;
+  color: #4f4f53;
+}
+.reply:hover {
+  color: #1d9bf0;
+  background-color: #0a1720;
+}
+.retweet:hover {
+  color: #02895c;
+  background-color: #0a1720;
+}
+.heart:hover {
+  color: #d4156d;
+  background-color: #0a1720;
+}
+.stats:hover {
+  color: #1568a0;
+  background-color: #0a1720;
+}
+.icon i {
+  margin-right: 0.4rem;
+}
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.tweet-footer i {
+  color: #657786;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.tweet-footer span {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.tweet-footer div {
+  font-size: 0.9rem;
+}
+
+.tweet-footer span i {
+  margin-right: 5px;
+}
+
+/** RightSidebar component **/
+.right-sidebar {
+  width: 450px;
+  background-color: #000;
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/** SearchBar component **/
+.search-container {
+  display: flex;
+  align-items: left;
+  align-items: flex-start;
+  width: 90%;
+  background-color: #000;
+  border-radius: 1rem;
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+}
+
+.search-input {
+  flex: 1;
+  height: 1.5rem;
+  padding: 10px;
+  border: none;
+  border-radius: 2rem;
+  background-color: #202327;
+  font-size: 16px;
+  color: white;
+}
+
+/** PremiumButton component **/
+.premium-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  width: 80%;
+  background-color: #000;
+  border-radius: 10px;
+  margin: 1rem 0;
+  padding: 0.7rem;
+  position: relative;
+  border: 0.5px solid #2f3336;
+}
+.premium-button-content {
+  position: relative; /* For text positioning over background */
+  z-index: 1; /* Ensure text is on top of the background */
+  color: #fff;
+  text-align: left;
+}
+.premium-button-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.premium-button-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.premium-button {
+  background-color: #1a8cd8;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.premium-button:hover {
+  background-color: #0c93ec;
+}
+/** TrendingTopic component **/
+.trending-topic {
+  width: 80%;
+  background-color: #000;
+  padding: 20px;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 0.5px solid #2f3336;
+}
+.trending-topic h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.show-more {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  color: #1da1f2;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.show-more:hover {
+  color: #1a91da;
+}
+
+/** TrendItem component **/
+.trend-item {
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.category {
+  font-size: 14px;
+  color: #4c4f53;
+  margin: 0;
+}
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.posts {
+  font-size: 14px;
+  color: #4c4f53;
+  margin: 0;
+}
+/** LoginForm component **/
+.login-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #000;
+  border-radius: 8px;
+}
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-header h2 {
+  color: #ffffff;
+}
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+.submit-button {
+  background-color: #1da1f2;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.submit-button:hover {
+  background-color: #1a91da;
+}
+
+.profile-summary,
+.premium-promotion,
+.trends,
+.suggestions {
+  margin-bottom: 20px;
+}
+
+.trend-item,
+.suggestion-item {
+  padding: 10px;
+  background-color: #000;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.space {
+  display: inline-block;
+  width: 1rem;
+}
+.send-button {
+  background-color: #1a8cd8;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1.2rem 5rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.send-button:hover {
+  background-color: #0c93ec;
+}
+
+.signup-form {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  margin: 0 auto;
+}
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input[type="text"],
+input[type="password"] {
+  background-color: #121212;
+  border: 1px solid #333;
+  border-radius: 1rem;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #4c4f53;
+}
+
+.submit-button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
