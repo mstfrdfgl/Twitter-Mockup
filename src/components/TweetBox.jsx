@@ -25,12 +25,13 @@ const ProfilePicture = styled.img`
 `;
 
 const TweetInput = styled.input`
-  width: 100%;
+  width: 99%;
   background-color: transparent;
-  border: none;
-  color: #fff;
-  font-size: 1rem;
+  border: 0.1px solid #2f3336;
+  color: #ffffff;
+  resize: none;
   outline: none;
+  font-size: 1rem;
 `;
 
 const TweetBoxFooter = styled.div`

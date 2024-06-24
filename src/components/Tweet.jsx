@@ -114,10 +114,8 @@ export default function Tweet({ tweet }) {
     <TweetDiv>
       <TweetHeader>
         <ProfilePicture src={tweet.profilePicture} alt="Profile" />
-        <div>
-          <Username>{tweet.username}</Username>
-          <Handle>{tweet.handle}</Handle>
-        </div>
+        <Username>{tweet.username}</Username>
+        <Handle>{tweet.handle}</Handle>
         <Timestamp>{tweet.timestamp}</Timestamp>
       </TweetHeader>
       <TweetBody>

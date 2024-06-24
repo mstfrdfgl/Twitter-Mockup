@@ -27,7 +27,8 @@ const Posts = styled.p`
   color: #4c4f53;
   margin: 0;
 `;
-const TrendItem = ({ category, title, posts }) => {
+
+export default function TrendItem({ category, title, posts }) {
   return (
     <TrendItemDiv>
       <Category>{category}</Category>
@@ -35,6 +36,4 @@ const TrendItem = ({ category, title, posts }) => {
       <Posts>{posts}</Posts>
     </TrendItemDiv>
   );
-};
-
-export default TrendItem;
+}

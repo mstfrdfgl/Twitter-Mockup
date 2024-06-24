@@ -18,6 +18,12 @@ const SidebarDiv = styled.div`
   background-color: #000;
   padding: 0 0 1rem;
   font-size: 1.2rem;
+  @media (max-width: 768px) {
+    width: 200px;
+  }
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 const SpaceSpan = styled.span`
   display: inline-block;

@@ -11,15 +11,21 @@ import LoginForm from "./components/LoginForm";
 import Sidebar from "./components/Sidebar";
 import MainContent from "./components/MainContent";
 import "./App.css";
+import styled from "styled-components";
 
+const AppDiv = styled.div`
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+`;
 const Home = ({ userData }) => {
   const { userId } = useParams();
 
   return (
-    <div className="app">
+    <AppDiv>
       <Sidebar username={userData.username} userId={userId} />
       <MainContent userId={userId} />
-    </div>
+    </AppDiv>
   );
 };
 

@@ -16,6 +16,9 @@ const TweetFeedDiv = styled.div`
   flex: 1;
   width: 600px;
   border: 0.5px solid #2f3336;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export default function TweetFeed() {
   return (
