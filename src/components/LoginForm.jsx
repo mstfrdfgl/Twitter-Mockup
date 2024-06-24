@@ -1,8 +1,63 @@
 import React, { useState } from "react";
 import axios from "axios";
+import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { BsTwitterX } from "react-icons/bs";
 
+const LoginFormContainer = styled.div`
+  width: 300px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #000;
+  border-radius: 8px;
+`;
+
+const FormHeader = styled.div`
+  text-align: center;
+  margin-bottom: 20px;
+`;
+
+const FormHeaderTitle = styled.h2`
+  color: #ffffff;
+`;
+
+const ErrorMessage = styled.p`
+  color: red;
+  margin-bottom: 10px;
+`;
+
+const SubmitButton = styled.button`
+  background-color: #1da1f2;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #1a91da;
+  }
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
+const FormInput = styled.input`
+  background-color: #121212;
+  border: 1px solid #333;
+  border-radius: 1rem;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  &::placeholder {
+    color: #4c4f53;
+  }
+`;
 export default function LoginForm({ setUserData }) {
   const [formData, setFormData] = useState({
     username: "",
@@ -82,14 +137,13 @@ export default function LoginForm({ setUserData }) {
     );
   };
   return (
-    <div className="login-form">
-      <div className="form-header">
+    <LoginFormContainer>
+      <FormHeader>
         {<BsTwitterX />}
-        <h2>Giriş Yap</h2>
-      </div>
-      <form onSubmit={handleSubmit}>
-        <input
-          className="form-input"
+        <FormHeaderTitle>Giriş Yap</FormHeaderTitle>
+      </FormHeader>
+      <Form onSubmit={handleSubmit}>
+        <FormInput
           type="text"
           name="username"
           placeholder="Kullanıcı Adı"
@@ -97,8 +151,7 @@ export default function LoginForm({ setUserData }) {
           onChange={handleChange}
         />
         {errors.username && <p className="error">{errors.username}</p>}
-        <input
-          className="form-input"
+        <FormInput
           type="password"
           name="password"
           placeholder="Şifre"
@@ -106,14 +159,10 @@ export default function LoginForm({ setUserData }) {
           onChange={handleChange}
         />
         {errors.password && <p className="error">{errors.password}</p>}
-        <button
-          type="submit"
-          className="submit-button"
-          disabled={!isFormValid()}
-        >
+        <SubmitButton type="submit" disabled={!isFormValid()}>
           Giriş Yap
-        </button>
-      </form>
-    </div>
+        </SubmitButton>
+      </Form>
+    </LoginFormContainer>
   );
 }

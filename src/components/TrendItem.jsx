@@ -1,12 +1,39 @@
-import React from "react";
+import styled from "styled-components";
 
+const TrendItemDiv = styled.div`
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #080808;
+  }
+`;
+
+const Category = styled.p`
+  font-size: 14px;
+  color: #4c4f53;
+  margin: 0;
+`;
+
+const Title = styled.p`
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+`;
+
+const Posts = styled.p`
+  font-size: 14px;
+  color: #4c4f53;
+  margin: 0;
+`;
 const TrendItem = ({ category, title, posts }) => {
   return (
-    <div className="trend-item">
-      <p className="category">{category}</p>
-      <p className="title">{title}</p>
-      <p className="posts">{posts}</p>
-    </div>
+    <TrendItemDiv>
+      <Category>{category}</Category>
+      <Title>{title}</Title>
+      <Posts>{posts}</Posts>
+    </TrendItemDiv>
   );
 };
 

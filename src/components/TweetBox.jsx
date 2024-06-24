@@ -10,31 +10,76 @@ const TweetBoxDiv = styled.div`
   border-radius: 10px;
   padding: 10px;
 `;
+const TweetBoxHeader = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+`;
+
+const ProfilePicture = styled.img`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+`;
+
+const TweetInput = styled.input`
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+`;
+
+const TweetBoxFooter = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3.2rem;
+`;
+
+const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #0c93ec;
+`;
+
+const TweetButton = styled.button`
+  background-color: #1a8cd8;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0c93ec;
+  }
+`;
 export default function TweetBox() {
   return (
     <TweetBoxDiv>
-      <div className="tweet-box-header">
-        <img
+      <TweetBoxHeader>
+        <ProfilePicture
           src="https://picsum.photos/100/100?random=10"
           alt="Profile"
-          className="profile-picture"
         />
-        <input
-          type="text"
-          placeholder="Neler oluyor?"
-          className="tweet-input"
-        />
-      </div>
-      <div className="tweet-box-footer">
-        <div className="icons">
+        <TweetInput type="text" placeholder="Neler oluyor?" />
+      </TweetBoxHeader>
+      <TweetBoxFooter>
+        <Icons>
           <FaImage className="boxicon" />
           <MdOutlineGifBox className="boxicon" />
           <RiSurveyFill className="boxicon" />
           <FaSmile className="boxicon" />
           <FaMapMarkerAlt className="boxicon" />
-        </div>
-        <button className="tweet-button">Gönder</button>
-      </div>
+        </Icons>
+        <TweetButton>Gönder</TweetButton>
+      </TweetBoxFooter>
     </TweetBoxDiv>
   );
 }
