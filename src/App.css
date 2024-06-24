@@ -20,7 +20,6 @@ body {
   padding: 0 0 1rem;
   font-size: 1.2rem;
 }
-
 .sidebar-item {
   display: flex;
   align-items: center;
@@ -32,13 +31,8 @@ body {
   font-size: 1.3rem;
   font-weight: 400;
 }
-
 .sidebar-item:hover {
   background-color: #181818;
-}
-
-.sidebar-item .icon {
-  margin-right: 10px;
 }
 
 /** SidebarItem component **/
@@ -47,7 +41,7 @@ body {
   align-items: center;
   padding: 10px;
 }
-.profile-details {
+*/ .profile-details {
   margin-left: 10px;
   flex-grow: 1;
 }
@@ -276,7 +270,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
-  width: 80%;
+  width: 84%;
   background-color: #000;
   border-radius: 10px;
   margin: 1rem 0;
@@ -285,8 +279,8 @@ body {
   border: 0.5px solid #2f3336;
 }
 .premium-button-content {
-  position: relative; /* For text positioning over background */
-  z-index: 1; /* Ensure text is on top of the background */
+  display: flex;
+  flex-direction: column;
   color: #fff;
   text-align: left;
 }
@@ -301,6 +295,7 @@ body {
   margin-bottom: 20px;
 }
 .premium-button {
+  width: 30%;
   background-color: #1a8cd8;
   color: white;
   padding: 12px 20px;
@@ -392,53 +387,6 @@ body {
 .submit-button:hover {
   background-color: #1a91da;
 }
-
-.profile-summary,
-.premium-promotion,
-.trends,
-.suggestions {
-  margin-bottom: 20px;
-}
-
-.trend-item,
-.suggestion-item {
-  padding: 10px;
-  background-color: #000;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.space {
-  display: inline-block;
-  width: 1rem;
-}
-.send-button {
-  background-color: #1a8cd8;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 1.2rem 5rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.send-button:hover {
-  background-color: #0c93ec;
-}
-
-.signup-form {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 400px;
-  margin: 0 auto;
-}
-.form-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
 form {
   display: flex;
   flex-direction: column;
@@ -457,11 +405,27 @@ input[type="text"]::placeholder,
 input[type="password"]::placeholder {
   color: #4c4f53;
 }
-
-.submit-button:disabled {
-  background-color: #444;
-  cursor: not-allowed;
+/** SendButton component **/
+.send-button {
+  background-color: #1a8cd8;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1.2rem 5rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+.send-button:hover {
+  background-color: #0c93ec;
+}
+
+.space {
+  display: inline-block;
+  width: 1rem;
+}
+
 .profile-picture {
   width: 40px;
   height: 40px;

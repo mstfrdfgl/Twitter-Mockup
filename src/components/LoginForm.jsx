@@ -16,8 +16,8 @@ export default function LoginForm({ setUserData }) {
 
   const history = useHistory();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
     setFormData({
       ...formData,
       [name]: value,
@@ -52,8 +52,8 @@ export default function LoginForm({ setUserData }) {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
     const data = {
       username: formData.username,

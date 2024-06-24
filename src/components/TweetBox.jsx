@@ -1,17 +1,18 @@
-import React from "react";
-import {
-  FaImage,
-  FaChartBar,
-  FaSmile,
-  FaCalendarAlt,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+import { FaImage, FaSmile, FaMapMarkerAlt } from "react-icons/fa";
 import { MdOutlineGifBox } from "react-icons/md";
 import { RiSurveyFill } from "react-icons/ri";
+import styled from "styled-components";
 
+const TweetBoxDiv = styled.div`
+  background-color: #000;
+  border-right: 0.5px solid rgb(65, 65, 65);
+  border-left: 0.5px solid rgb(65, 65, 65);
+  border-radius: 10px;
+  padding: 10px;
+`;
 export default function TweetBox() {
   return (
-    <div className="tweet-box">
+    <TweetBoxDiv>
       <div className="tweet-box-header">
         <img
           src="https://picsum.photos/100/100?random=10"
@@ -34,6 +35,6 @@ export default function TweetBox() {
         </div>
         <button className="tweet-button">Gönder</button>
       </div>
-    </div>
+    </TweetBoxDiv>
   );
 }

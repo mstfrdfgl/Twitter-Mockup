@@ -1,5 +1,5 @@
-import React from "react";
 import SidebarItem from "./SidebarItem";
+import styled from "styled-components";
 import { FaHome } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
@@ -13,58 +13,94 @@ import { CiUser } from "react-icons/ci";
 import { CiCircleMore } from "react-icons/ci";
 import SendButton from "./SendButton";
 
+const SidebarDiv = styled.div`
+  width: 250px;
+  background-color: #000;
+  padding: 0 0 1rem;
+  font-size: 1.2rem;
+`;
+const SpaceSpan = styled.span`
+  display: inline-block;
+  width: 1rem;
+`;
+const ProfileDiv = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 10px;
+`;
+const ProfileImg = styled.img`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+`;
+const ProfileDetailsDiv = styled.div`
+  margin-left: 10px;
+  flex-grow: 1;
+`;
+const NameSpan = styled.span`
+  display: block;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.9rem;
+`;
+const HandleSpan = styled.span`
+  display: block;
+  color: #aaaaaa;
+  font-size: 0.8rem;
+`;
 export default function Sidebar({ userId, username }) {
   return (
-    <div className="sidebar">
+    <SidebarDiv>
       <SidebarItem icon={<BsTwitterX />}></SidebarItem>
       <SidebarItem icon={<FaHome />}>
-        <span className="space"></span> Anasayfa
+        <SpaceSpan></SpaceSpan>Anasayfa
       </SidebarItem>
       <SidebarItem icon={<IoSearchOutline />}>
-        <span className="space"></span> Keşfet
+        <SpaceSpan></SpaceSpan>Keşfet
       </SidebarItem>
       <SidebarItem icon={<CiBellOn />}>
-        <span className="space"></span> Bildirimler
+        <SpaceSpan></SpaceSpan>Bildirimler
       </SidebarItem>
       <SidebarItem icon={<FaRegEnvelope />}>
-        <span className="space"></span> Mesajlar
+        <SpaceSpan></SpaceSpan>Mesajlar
       </SidebarItem>
       <SidebarItem icon={<IoRocketOutline />}>
-        <span className="space"></span> Grok
+        <SpaceSpan></SpaceSpan>Grok
       </SidebarItem>
       <SidebarItem icon={<LuClipboardList />}>
-        <span className="space"></span> Listeler
+        <SpaceSpan></SpaceSpan>Listeler
       </SidebarItem>
       <SidebarItem icon={<CiBookmark />}>
-        <span className="space"></span> Yer İşaretleri
+        <SpaceSpan></SpaceSpan>Yer İşaretleri
       </SidebarItem>
       <SidebarItem icon={<HiOutlineUsers />}>
-        <span className="space"></span> Topluluklar
+        <SpaceSpan></SpaceSpan>Topluluklar
       </SidebarItem>
       <SidebarItem icon={<BsTwitterX />}>
-        <span className="space"></span> Premium
+        <SpaceSpan></SpaceSpan>Premium
       </SidebarItem>
       <SidebarItem icon={<CiUser />}>
-        <span className="space"></span> Profil
+        <SpaceSpan></SpaceSpan>Profil
       </SidebarItem>
       <SidebarItem icon={<CiCircleMore />}>
-        <span className="space"></span> Daha Fazla
+        <SpaceSpan></SpaceSpan>Daha Fazla
       </SidebarItem>
       <SendButton />
-      <div className="profile-section">
-        <img
+      <ProfileDiv>
+        <ProfileImg
           src="https://picsum.photos/100/100?random=10"
           alt="Profile"
-          className="profile-picture"
         />
-        <div className="profile-details">
-          <span className="profile-name">{username}</span>
-          <span className="profile-handle">
+        <ProfileDetailsDiv>
+          <NameSpan>{username}</NameSpan>
+          <HandleSpan>
             @{username}
             {userId}
-          </span>
-        </div>
-      </div>
-    </div>
+          </HandleSpan>
+        </ProfileDetailsDiv>
+      </ProfileDiv>
+    </SidebarDiv>
   );
 }
