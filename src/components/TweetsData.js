@@ -1,6 +1,6 @@
-import Tadic from "../assets/tadic.jpg";
 import Ataturk from "../assets/Ataturk.jpg";
 import Ataturkpp from "../assets/Ataturkpp.jpg";
+import Tadic from "../assets/tadic.jpg";
 import Fenerbahcepp from "../assets/fenerbahce.png";
 import Fenerbahce from "../assets/fenerbahcepost.jpg";
 
