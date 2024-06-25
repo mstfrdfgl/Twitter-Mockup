@@ -10,12 +10,10 @@ const TrendingTopicDiv = styled.div`
   border-radius: 10px;
   border: 0.5px solid #2f3336;
 `;
-
 const TrendingHeader = styled.h2`
   font-size: 18px;
   margin-bottom: 10px;
 `;
-
 const ShowMore = styled.a`
   display: block;
   text-align: center;
@@ -25,7 +23,6 @@ const ShowMore = styled.a`
   font-size: 0.9rem;
   transition: color 0.3s ease;
   cursor: pointer;
-
   &:hover {
     color: #086faf;
   }
@@ -34,6 +31,7 @@ export default function TrendingTopic() {
   return (
     <TrendingTopicDiv>
       <TrendingHeader>İlginizi çekebilecek gündemler</TrendingHeader>
+      {/* Trendind data dizisi map edilerek içerisindeki her bir obje TrendItem componentine prop olarak iletilir. */}
       {TrendingData.map((item, index) => (
         <TrendItem
           key={index}

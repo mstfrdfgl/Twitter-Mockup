@@ -27,7 +27,7 @@ const Posts = styled.p`
   color: #4c4f53;
   margin: 0;
 `;
-
+//parent componentten alınan proplar kullanılarak TrendingData dizisindeki her bir obje için bir TrendItem öğesi oluşturulur.
 export default function TrendItem({ category, title, posts }) {
   return (
     <TrendItemDiv>

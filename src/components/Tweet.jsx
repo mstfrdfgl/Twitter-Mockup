@@ -53,46 +53,36 @@ const Icon = styled.div`
   display: flex;
   align-items: center;
   gap: 0.3rem;
-
   &:hover {
     color: #1d9bf0;
-    background-color: #0a1720;
   }
 `;
 
 const Reply = styled(Icon)`
   color: #4c4f53;
-
   &:hover {
     color: #1d9bf0;
-    background-color: #0a1720;
   }
 `;
 
 const Retweet = styled(Icon)`
   color: #4c4f53;
-
   &:hover {
     color: #02895c;
-    background-color: #0a1720;
   }
 `;
 
 const Heart = styled(Icon)`
   color: #4c4f53;
-
   &:hover {
     color: #d4156d;
-    background-color: #0a1720;
   }
 `;
 
 const Stats = styled(Icon)`
   color: #4c4f53;
-
   &:hover {
     color: #1568a0;
-    background-color: #0a1720;
   }
 `;
 
@@ -108,6 +98,8 @@ const ProfilePicture = styled.img`
   margin-right: 10px;
   cursor: pointer;
 `;
+
+//parent componentten alınan prop kullanılarak her TweetsData dizisindeki her bir öğe için bir Tweet oluşturulur.
 export default function Tweet({ tweet }) {
   const { username, handle, profilePicture, timestamp, text } = tweet;
   return (

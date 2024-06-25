@@ -1,8 +1,10 @@
-# React + Vite
+GELİŞTİRİLEBİLECEK ALANLAR.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+//daha gelişmiş react özellikleri(contextApi,redux,useForm,tailwind...) kullanılarak projenin güncellenmesi.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1->dinamik olarak yeni bir tweet oluşturulması veya silinmesi.
+2->tweetleri beğenme veya yanıtlama gibi özelliklerin eklenmesi ve bu özellikler kullanıldığında örnek olarak beğeni sayısının artması.
+3->login sayfasında alınan bilgileri de kullanarak kullanı profil sayfasının oluşturulması
+4->Sidebar içerisinde bulunan sayfaların oluşturulup işlevsel hale getirilmesi.
+5->sabit tweetler kullanmak yerine en azından kullanıcı her giriş yaptığında bir tweet havuzu içerisinden rastgele tweetler gösterilmesi.
+6->SearchBar aktif hale getirilerek belirli kriterde kullanıcı araması yapılması.

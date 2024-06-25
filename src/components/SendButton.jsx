@@ -15,7 +15,6 @@ const SendButtonStyled = styled.button`
     background-color: #0c93ec;
   }
 `;
-
 export default function SendButton() {
   return <SendButtonStyled>Gönder</SendButtonStyled>;
 }

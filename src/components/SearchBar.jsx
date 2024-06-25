@@ -8,7 +8,7 @@ const SearchContainer = styled.div`
   background-color: #000;
   border-radius: 1rem;
   margin: 0;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   text-align: left;
 `;
 const Input = styled.input`
@@ -18,8 +18,11 @@ const Input = styled.input`
   border: none;
   border-radius: 2rem;
   background-color: #202327;
-  font-size: 16px;
+  font-size: 1rem;
   color: white;
+  &:focus {
+    outline: 1px solid #1da1f2;
+  }
 `;
 export default function SearchBar() {
   return (

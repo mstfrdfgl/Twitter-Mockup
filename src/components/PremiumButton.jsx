@@ -13,26 +13,22 @@ const PremiumButtonContainer = styled.div`
   position: relative;
   border: 0.5px solid #2f3336;
 `;
-
 const PremiumButtonContent = styled.div`
   display: flex;
   flex-direction: column;
   color: #fff;
   text-align: left;
 `;
-
 const PremiumButtonTitle = styled.h3`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
 `;
-
 const PremiumButtonDescription = styled.p`
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
 `;
-
 const PremiumButtonStyled = styled.button`
   width: 30%;
   background-color: #1a8cd8;
@@ -42,7 +38,6 @@ const PremiumButtonStyled = styled.button`
   border-radius: 2rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
   &:hover {
     background-color: #0c93ec;
   }

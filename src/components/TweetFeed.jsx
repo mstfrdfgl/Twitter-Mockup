@@ -24,6 +24,7 @@ export default function TweetFeed() {
   return (
     <MainContent>
       <TweetFeedDiv>
+        {/* TweetsData dizisi map edilerek içerisindeki her bir obje Tweet componentine prop olarak iletilir. */}
         {TweetsData.map((tweet) => (
           <Tweet key={tweet.id} tweet={tweet} />
         ))}

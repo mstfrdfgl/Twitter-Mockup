@@ -14,6 +14,8 @@ const Aside = styled.aside`
     background-color: #181818;
   }
 `;
+
+//Parent component yani Sidebar componentinden gelen proplar destruct edilerek bir Aside oluşturulur.
 export default function SidebarItem({ icon, children }) {
   return (
     <Aside>

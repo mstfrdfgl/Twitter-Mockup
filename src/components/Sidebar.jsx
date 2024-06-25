@@ -58,6 +58,7 @@ const HandleSpan = styled.span`
 `;
 export default function Sidebar({ userId, username }) {
   return (
+    //SidebarItem componentine icon ve children propları iletilir.componentine açma ve kapama etikenin arasında bulunan her şey children prop olarak kabul edilir.
     <SidebarDiv>
       <SidebarItem icon={<BsTwitterX />}></SidebarItem>
       <SidebarItem icon={<FaHome />}>
