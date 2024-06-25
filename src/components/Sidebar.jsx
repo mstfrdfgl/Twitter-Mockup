@@ -62,7 +62,8 @@ export default function Sidebar({ userId, username }) {
     <SidebarDiv>
       <SidebarItem icon={<BsTwitterX />}></SidebarItem>
       <SidebarItem icon={<FaHome />}>
-        <SpaceSpan></SpaceSpan>Anasayfa
+        <SpaceSpan></SpaceSpan>
+        <span className="anasayfa">Anasayfa</span>
       </SidebarItem>
       <SidebarItem icon={<IoSearchOutline />}>
         <SpaceSpan></SpaceSpan>Keşfet

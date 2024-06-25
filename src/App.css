@@ -19,3 +19,6 @@ input[type="text"]::placeholder,
 input[type="password"]::placeholder {
   color: #4c4f53;
 }
+.anasayfa {
+  font-weight: 900;
+}
